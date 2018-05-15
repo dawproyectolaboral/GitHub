@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Comila HTML CSS Template</title>
+<!--
+Comila Template
+http://www.templatemo.com/tm-490-comila
+-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<!-- stylesheets css -->
+	<link rel="stylesheet" href="css2/bootstrap.min.css">
+	<link rel="stylesheet" href="css2/animate.min.css">
+
+  	<link rel="stylesheet" href="css2/et-line-font.css">
+	<link rel="stylesheet" href="css2/font-awesome.min.css">
+
+  	<link rel="stylesheet" href="css2/vegas.min.css">
+	<link rel="stylesheet" href="css2/style.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+  <style type="text/css">
+  #a1:hover{
+   font-size:20px;
+  }
+  
+  </style>
+  
+ 
+</head>
+<body>
+
+<!-- preloader section -->
+<section class="preloader">
+	<div class="sk-circle">
+       <div class="sk-circle1 sk-child"></div>
+       <div class="sk-circle2 sk-child"></div>
+       <div class="sk-circle3 sk-child"></div>
+       <div class="sk-circle4 sk-child"></div>
+       <div class="sk-circle5 sk-child"></div>
+       <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+       <div class="sk-circle8 sk-child"></div>
+       <div class="sk-circle9 sk-child"></div>
+       <div class="sk-circle10 sk-child"></div>
+       <div class="sk-circle11 sk-child"></div>
+       <div class="sk-circle12 sk-child"></div>
+     </div>
+</section>
+
+<!-- home section -->
+<section id="home">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<div class="home-thumb">
+					<h1 class="wow fadeInUp" data-wow-delay="0.4s">Gamitour</h1>
+          			<h3 class="wow fadeInUp" data-wow-delay="0.6s">Descubre <strong>Asturias</strong> a través de nuestras <strong>actividades</strong></h3>
+          			<a href="#about" data-toggle="modal" data-target="#modal2" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="0.8s"  style="width:220px;"><i class="fas fa-file-alt"></i> Registrarse   </a>
+        			<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-lg btn-success smoothScroll wow fadeInUp" data-wow-delay="1.0s"  style="width:220px;"><i class="fas fa-user"></i> Iniciar Sesión</a>
+				</div>
+			</div>
+
+		</div>
+	</div>		
+</section>
+
+
+
+
+
+<!-- modal -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" id="">
+      <div class="modal-content modal-popup">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title" id="">Inicio De Sesión</h2>
+        </div>
+        <form action="iniciarSesion.do" method="post">
+          <input name="nick" type="text" class="form-control" id="nick" placeholder="Nick">
+          <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
+         <a href="" style="text-decoration:none;"><input name="submit" type="submit" class="form-control" id="submit" value="Ingresar"></a>
+        </form>
+         
+      
+        
+      </div>
+  </div>
+  </div>
+  
+  
+  
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="">
+      <div class="modal-content modal-popup">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title">Registro</h2>
+        </div>
+        <form action="InsertarUsuariosExterno.do" method="post">
+          <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
+          <input name="apellidos" type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+          <input name="email" type="text" class="form-control" id="email" placeholder="E-mail">
+           <input name="nick" type="text" class="form-control" id="nick" placeholder="Nick">
+          <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
+          <input name="fechaNacimiento" type="text" class="form-control" id="fechaNac" placeholder="Fecha Nacimiento(Año-Mes-Día)">
+            <input name="telefono" type="text" class="form-control" id="tlf" placeholder="Teléfono">
+         <input name="direccion" type="text" class="form-control" id="dir" placeholder="Dirección">
+         <input name="cp" type="text" class="form-control" id="cp" placeholder="Código Postal">
+         <a href="" style="text-decoration:none;"><input name="submit" type="submit" class="form-control" id="submit" value="Registrarse"></a>
+        </form>
+         
+       
+        
+      </div>
+  </div>
+
+  
+</div>
+
+
+
+
+<!-- Back top -->
+<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- javscript js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vegas.min.js"></script>
+
+<script src="js/wow.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

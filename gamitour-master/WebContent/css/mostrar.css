@@ -1,0 +1,110 @@
+body {
+   
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EFF4F5;
+}
+
+h1{
+  text-align: center;
+}
+
+#cabecera{
+width:30%;
+height: 10%;
+background-color: #1F2D3D;
+border-radius: 10px;
+color:white;
+padding: 5px;
+margin: auto;
+margin-bottom: 50px;
+margin-top: 50px;
+}
+#icono{
+color: #64A7D1;
+}
+
+#tabla {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+ 
+   
+}
+
+#tabla td, #tabla th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#tabla tr:nth-child(even){background-color: #EEEEEE;}
+
+tr:nth-child(odd){background-color: #FFFFFF;}
+
+#tabla tr:hover {background-color: #ddd;}
+
+#tabla th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #64A7D1;
+    color: white;
+    text-align: center;
+}
+#tabla th:hover{
+  background-color: #1F2D3D;
+}
+
+#td{
+
+width: 100px;
+
+}
+
+.seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top:20px;
+    
+}
+
+
+/*Estos son los elementos que aparecen en el inicio del panel de administrador*/
+
+
+/*Table-cell para dividir el contenido, un ancho igual para cada uno de los elementos, 
+genero un borde para el contenedor,
+separo cada uno de los elementos entre si con 10px, texto alineado al centro y de color blanco*/
+
+.cajamenu {
+    width: 230px;
+    border: 1px solid rgba(212, 209, 208, 1);
+    text-align: center;
+    color: white;
+}
+
+
+/*Display block para que ocupe el 100% del contenedor,tamaño del texto propio, 
+color de fondo, color blanco para el texto, desparece la decoracion del texto, esta alineado al centro 
+y padding superior e inferior de 30px*/
+
+.cajamenu a {
+    display: block;
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #64A7D1;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+/*Transicion al pasar por el cursor por cada uno de los contenedores*/
+
+.cajamenu :hover {
+    background-color: #1F2D3D;
+    transition: 0.8s;
+}
+
+
+

@@ -1,0 +1,359 @@
+/*CSS del aspecto visual del panel de administrador*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Estilos para todo el html, y cambio el estilo de letra al propuesto*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+     background-color: #EFF4F5;
+    
+   
+}
+
+
+
+
+/*Creo una linea para separar el titulo de cada apartado con el resto de cajas*/
+
+hr {
+    margin-top: 2em;
+    height: 5px;
+    background-color: #778AAA;
+    width: 98%;
+    margin-left: 10px;
+}
+
+
+/*Tamaño de los elementos dentro del encabezado*/
+
+.cabecera {
+    width: 100%;
+   
+}
+
+.l {
+    font-size: 1.8em;
+    text-align: center;
+    color: black;
+}
+
+.menuinicio {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*Declaro el ancho de menu de navegacion, el margen que tiene por arriba y el tamaño de letra*/
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 1em;
+    z-index: 1;
+    margin-top: 10px;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.celdas {
+    width: 250px;
+    background-color: #64A7D1;
+}
+
+
+/*Display block para que el <a> ocupe el contenido del <li> quitamos la decoracion del texto, 
+esta alineado al centro, de color blanco y un padding por arriba y por abajo de 10px*/
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*Le doi el color y el tiempo a la transicion cuando pasamos el raton por encima de cada elemento del navegador*/
+
+nav a:hover {
+    background-color: #1F2D3D;
+    transition: 0.8s;
+}
+
+
+/*Alineacion de todos los elementos h1 del documento html*/
+
+h1 {
+    text-align: center
+}
+
+
+/*En este caso le doi un display table para dividir el contendi en celdas 90% de ancho, 
+separo cada una de las cajas y un border-spacing de 10px y la posicion relativa*/
+
+.seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/*Estos son los elementos que aparecen en el inicio del panel de administrador*/
+
+
+/*Table-cell para dividir el contenido, un ancho igual para cada uno de los elementos, 
+genero un borde para el contenedor,
+separo cada uno de los elementos entre si con 10px, texto alineado al centro y de color blanco*/
+
+.cajamenu {
+    width: 230px;
+    border: 1px solid rgba(212, 209, 208, 1);
+    text-align: center;
+    color: white;
+}
+
+#caja {
+	  width: 230px;
+    border: 1px solid rgba(212, 209, 208, 1);
+    text-align: center;
+    color: white;
+    
+}
+
+
+#caja a {
+    display: block;
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #64A7D1;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+/*Transicion al pasar por el cursor por cada uno de los contenedores*/
+
+#caja :hover {
+    background-color: #1F2D3D;
+    transition: 0.8s;
+}
+/*Display block para que ocupe el 100% del contenedor,tamaño del texto propio, 
+color de fondo, color blanco para el texto, desparece la decoracion del texto, esta alineado al centro 
+y padding superior e inferior de 30px*/
+
+.cajamenu a {
+    display: block;
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #64A7D1;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+/*Transicion al pasar por el cursor por cada uno de los contenedores*/
+
+.cajamenu :hover {
+    background-color: #1F2D3D;
+    transition: 0.8s;
+}
+
+
+/*Cada uno de los elementos de cada elemento del navegador*/
+
+
+/*Display table-cell un ancho para cada uno del 25% aplico los estilos al borde, separado, 
+alineado al centro, color blanco y tamaño del texto para cada uno de los elementos*/
+
+.cajas {
+    display: block;
+    width: 300px;
+    border: 1px solid rgba(212, 209, 208, 1);
+    text-align: center;
+    color: white;
+    background-color: #64A7D1;
+}
+
+
+/*Display block para que ocupe el 100% del contenedor, color de fondo, color blanco para el texto, 
+desparece la decoracion del texto, esta alineado al centro y padding superior e inferior de 40px*/
+
+.cajas a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 2em;
+    
+}
+
+
+/*Transicion al pasar por el cursor por cada uno de los contenedores*/
+
+.cajas :hover {
+    background-color: #1F2D3D;
+    transition: 0.8s;
+}
+
+
+/*------------------------------------------CSS Para tener los div ocultos-----------------------------*/
+
+.inicio {
+    margin-top: 10px;
+}
+
+.Actividades {
+    margin-top: 10px;
+    display: none;
+}
+
+.Clientes {
+    margin-top: 10px;
+    display: none;
+}
+
+.Comentarios {
+    margin-top: 10px;
+    display: none;
+}
+
+.Itinerarios {
+    margin-top: 10px;
+    display: none;
+}
+
+.Multimedia {
+    margin-top: 10px;
+    display: none;
+}
+
+.Noticias {
+    margin-top: 10px;
+    display: none;
+}
+
+.Paradas {
+    margin-top: 10px;
+    display: none;
+}
+
+.Premios {
+    margin-top: 10px;
+    display: none;
+}
+
+.Pruebasculturales {
+    margin-top: 10px;
+    display: none;
+}
+
+.Pruebasdeportivas {
+    margin-top: 10px;
+    display: none;
+}
+
+.Roles {
+    margin-top: 10px;
+    display: none;
+}
+
+.Votos {
+    margin-top: 10px;
+    display: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------CSS de los formularios-------------------------------*/
+
+.insertaractividad {
+    margin-top: 20px;
+}
+
+.formulario {
+    background-color: #7EBFE0;
+    width: 500px;
+    margin-top: 30px!important;
+    margin-bottom: 50px!important;
+    padding-left: 25px;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.h1c {
+    background-color: #7EBFE0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.h1c a {
+    color: white;
+    font-size: 1.3em;
+}
+
+.f {
+    color: white;
+}
+
+.campos {
+    width: 450px;
+    font-size: 1.3em;
+    background-color: #7EBFE0;
+    border: 1px solid white;
+}
+
+.boton {
+    font-size: 1.1em;
+    color: #7EBFE0;
+    background: white;
+    border: 1px solid;
+    border-radius: 8px 8px 8px 8px;
+    width: 170px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+#b_submit {
+    text-align: center;
+    margin: auto;
+    margin-left: -20px;
+}
+
+.volver {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #7EBFE0;
+}
+
+.avolver {
+    text-decoration: none;
+    color: white;
+    margin: auto!important;
+    text-align: center!important;
+    width: 30%;
+    display: block;
+    font-size: 1.2em;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
