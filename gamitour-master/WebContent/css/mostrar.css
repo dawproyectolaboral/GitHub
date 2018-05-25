@@ -1,7 +1,10 @@
 body {
    
     font-family: 'Open Sans', sans-serif;
-    background-color: #EFF4F5;
+    
+    background-image: url("../images/img6.png");
+    background-repeat: no-repeat;
+    background-size:100%;
 }
 
 h1{
@@ -17,10 +20,10 @@ color:white;
 padding: 5px;
 margin: auto;
 margin-bottom: 50px;
-margin-top: 50px;
+margin-top: 20px;
 }
 #icono{
-color: #64A7D1;
+color:#1F2D3D;
 }
 
 #tabla {
@@ -45,7 +48,7 @@ tr:nth-child(odd){background-color: #FFFFFF;}
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #64A7D1;
+    background-color: #1F2D3D;
     color: white;
     text-align: center;
 }
@@ -92,7 +95,7 @@ y padding superior e inferior de 30px*/
     display: block;
     font-size: 1.5em;
     text-decoration: none;
-    background-color: #64A7D1;
+    background-color: #1F2D3D;
     color: white;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -102,7 +105,7 @@ y padding superior e inferior de 30px*/
 /*Transicion al pasar por el cursor por cada uno de los contenedores*/
 
 .cajamenu :hover {
-    background-color: #1F2D3D;
+    background-color: #64A7D1;
     transition: 0.8s;
 }
 

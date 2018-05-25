@@ -82,6 +82,7 @@ import com.dawes.voto.ModificarVotosPasoAccion;
 import com.dawes.voto.MostrarVotoAccion;
 import com.dawes.voto.MostrarVotosAccion;
 
+import Seguridad.CerrarSesion;
 import Seguridad.IniciarSessionAccion;
 
 
@@ -369,6 +370,10 @@ public abstract class Accion {
 		/*INICIAR SESSION*/
 		if(tipo.equals("iniciarSesion")){
 			return new IniciarSessionAccion();
+			
+		}
+		if(tipo.equals("cerrarSesion")){
+			return new CerrarSesion();
 			
 		}
 		

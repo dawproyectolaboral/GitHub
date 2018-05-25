@@ -26,13 +26,16 @@ public class InsertarUsuariosAccion extends Accion{
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
+
+		System.out.println("form insertar usuario ?");
+		
 		ServiceGenericDAO su = new ServiceGenericDAOImp();
 		 
 		Rol rol = (Rol)su.getDetalleRol("usuario");
 		
 		String nombre = request.getParameter("nombre");
 		String apellido = request.getParameter("apellidos");
-		/*String a Date*/
+		
 		Date fecha = null;
 		try {
 			String fechaNacimiento = request.getParameter("fechaNacimiento");

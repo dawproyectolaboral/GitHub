@@ -30,7 +30,7 @@ public class ModificarPDeportivaAccion extends Accion {
 		Date fecha = null;
 		try {
 			String fechaInicio = request.getParameter("fechainicioNueva");
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			String strFecha = fechaInicio;
 			fecha = formatoDelTexto.parse(strFecha);
 			pdeportiva.setFechainicio(fecha);
@@ -42,7 +42,7 @@ public class ModificarPDeportivaAccion extends Accion {
 		Date fechaFin = null;
 		try {
 			String fechaFinal = request.getParameter("fechafinNueva");
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			String strFecha = fechaFinal;
 			fechaFin = formatoDelTexto.parse(strFecha);
 			pdeportiva.setFechafin(fechaFin);

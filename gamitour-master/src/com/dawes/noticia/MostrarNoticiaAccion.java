@@ -33,12 +33,12 @@ public class MostrarNoticiaAccion extends Accion {
 		request.setAttribute("texto", textonoticia);
 		
 		Date fechadealta = noticia.getFechaalta();
-		DateFormat fecha1 = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat fecha1 = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaFString = fecha1.format(fechadealta);
 		request.setAttribute("fechaf", fechaFString);
 		
 		Date fechadecaducidad = noticia.getFechacaducidad();
-		DateFormat fecha2 = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat fecha2 = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaF2String = fecha2.format(fechadecaducidad);
 		request.setAttribute("fechac", fechaF2String);
 		

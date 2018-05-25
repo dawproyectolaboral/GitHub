@@ -30,7 +30,7 @@ public class ModificarMultimediasAccion extends Accion {
 			
 			String Fecha = request.getParameter("fechaNueva");
 			
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			
 			String strFecha = Fecha;
 			

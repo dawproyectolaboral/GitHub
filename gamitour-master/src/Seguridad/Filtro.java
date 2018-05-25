@@ -42,7 +42,7 @@ public class Filtro implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
 		// place your code here
-		System.out.println("pasa por filtro");
+		//System.out.println("pasa por filtro");
 		
 		/*convertimos en HttpServlet*/
 		HttpServletRequest req = (HttpServletRequest) request;
@@ -56,15 +56,15 @@ public class Filtro implements Filter {
 		
 		Cliente c = (Cliente) req.getSession().getAttribute("usuario");
 	
-		System.out.println("comprueba el usuario "+ c);
+		//System.out.println("comprueba el usuario "+ c);
 		Rol rol = (Rol) req.getSession().getAttribute("rol");
-		System.out.println("comprueba el rol "+ rol);
+		//System.out.println("comprueba el rol "+ rol);
 		
 		if(url.contains(rol.getNombre()) || rol.getNombre().equals("admin")){
-			System.out.println("pasa");
+			//System.out.println("pasa");
 			chain.doFilter(request, response);
 		}else{
-			System.out.println("sin privilegios de acceso");
+			//System.out.println("sin privilegios de acceso");
 			res.sendRedirect("/indexpanel.html");
 		}
 		

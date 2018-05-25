@@ -28,7 +28,7 @@ public class InsertarMultimediasAccion extends Accion{
 
 		Cliente cliente = (Cliente)su.getDetalleCliente(request.getParameter("nick"));	
 		
-		Pruebadeportiva pruebadeportiva = (Pruebadeportiva)su.getDetallePruebaDeportiva(request.getParameter("titulo"));	
+		Pruebadeportiva pruebadeportiva = (Pruebadeportiva)su.getDetallePruebaDeportiva(request.getParameter("nombrePd"));	
 		
 		String comentario = request.getParameter("comentario");	
 		String imagen = request.getParameter("imagen");
@@ -40,6 +40,7 @@ public class InsertarMultimediasAccion extends Accion{
 	
 		Multimedia multimedia = new Multimedia(cliente,pruebadeportiva,new Date(),comentario,imagen,video,puntosacumulados,titulo,comentarios,votos);
 		
+		/*
 		
 		Set<Multimedia> multimediasclie = cliente.getMultimedias();
 		multimediasclie.add(multimedia);
@@ -52,7 +53,7 @@ public class InsertarMultimediasAccion extends Accion{
 		pruebadeportiva.setMultimedias(multimediapruebd);
 		su.update(pruebadeportiva);
 		
-		
+		*/
 		su.insertar(multimedia);
 		
 		return "index.html";

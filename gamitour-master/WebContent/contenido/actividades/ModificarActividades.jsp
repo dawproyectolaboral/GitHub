@@ -1,15 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>ModificarActividades</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modificar actividad</title>
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="assets/theme/css/style.css">
+<link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+<link rel="shortcut icon" href="logoastur.png">
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
+<script language="JavaScript" SRC="js/mapaModificar.js"></script>
 
 <style type="text/css">
 
-    body{
-        background-color: #EFF4F5;
+   body{
+    background-image: url("images/img6.png");
+    background-repeat: no-repeat;
+    background-size:100%;
+    
     }
     .titulo{
     text-align:center;
@@ -31,111 +49,161 @@
     color:white;
 }
 
-table {
+ button {
+            width: 90px;
+            border: none;
+            background:#1F2D3D;
+            color: #f2f2f2;
+            font-size: 18px;
+            border-radius: 5px;
+            position: relative;
+            box-sizing: border-box;
+            transition: all 500ms ease;
+            padding: 8px;
 
-font: 75%/1.5em arial, geneva, sans-serif;
-border-collapse: collapse;
-margin: auto;
-margin-top:50px;
-font-size:17px;
-color:#EFF4F5;
+        }
 
-}
+        button:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0px;
+            height: 43px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            transition: all 0.5s ease;
+        }
 
-td {
-  
-border-bottom: 8px solid #fff;
-border-left: 1px dotted #fff;
-vertical-align: top;
-padding: 12px;
-border-style:groove;
-
-}
-
-tr {
-    background-color: #64A7D1;
-    
-}
-
-input{
-    background-color: #EFF4F5;
-    
-   
-   
-}
-
-.contenido{
-    margin:auto;
-}
-.botones{
-margin-top:10px;
-
-display:table;
-width: 100%;
-        height: 50px;
-      
-        text-align: center;
-  
-}
-.boton{
-    display:table-cell;
-    vertical-align: middle;
-    
-}
-
-.button{
-
-    border-radius: 9px;
-    width:140px;
-    padding: 5px;
-    background-color: #1F2D3D;
-    color:#EFF4F5;
-}
+        button:hover:before {
+            width: 100%;
+        }
+	 #map {
+        width: 300px;
+        height: 200px;
+      }
+	
 
     </style>
 </head>
 <body>
-<p class="titulo">GAMITOUR</p>
-        
-  
-<div class="cabecera">
-        <a class="titcabecera">MODIFICAR ACTIVIDAD</a>
-   </div>
-
-<div class="contenido">
-<form action="ModificarActividades.do" method="post">
-
-<table>
-
-<input type="hidden" name="nombre" value="${nombre}"/>
-<tr><td>Nombre : </td><td>${nombre}</td></tr>
-<tr><td>Fecha Inicio : </td><td><input type="text" value="${fechaInicio}" name="fechaNueva"></td></tr>
-<tr><td>Fecha fin : </td><td><input type="text" value="${fechaFin}" name="fechaFinNueva"></td></tr>
-<tr><td>Ubicacion : </td><td><input type="text" value="${ubicacion}" name="ubicacionNueva"></td></tr>
-<tr><td>Numero de Participantes :</td><td> <input type="text" value="${numParticipantes}" name="numparNuevo"></td></tr>
-<tr><td>Precio: </td><td><input type="text" value="${precio}" name="precioNuevo"></td></tr>
-<tr><td>Imagen : </td><td><input type="text" value="${imagen}" name="imagenNueva"></td></tr>
-<tr><td>Puntos : </td><td><input type="text" value="${puntos}" name="puntosNuevo"></td></tr>
-
-
-</table>	
-<div class="botones">
      
-    <div class="boton">
-<input class="button" type="submit" value="Modificar">
-<input class="button" type="reset" value="Limpiar">
-<a href="/Demo_Web/index.html"><input class="button" type="button" value="Volver"></a>
-
+    
+	
+ <div style="height: 60px;">
+    <h1 style="text-align:center;color:White;font-family:forte;font-size:40px;margin-top:20px;">GamiAstour</h1>  
 </div>
-
-</div>
-
-
-</form>
-</div>
+    <div class="cabecera">
+            <a class="titcabecera" style="color:White;">MODIFICAR ACTIVIDAD</a>
+       </div>
+    
 
 
 
+<section class="cid-qQSwyVJLVG mbr-fullscreen mbr-parallax-background" id="header15-i">
+
+
+   
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color:#5B5B5B;"></div>
+
+    <div class="container align-right" style="text-align: center;">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-5" style="margin:auto">
+                <div class="form-container" style="overflow-y: auto;margin-top:-120px;">
+                    <div class="media-container-column" data-form-type="formoid">
+                        <form action="ModificarActividades.do" class="mbr-form" method="POST">
+                       
+
+                            <div style="max-height: 340px;">
+
+                                
+                                <div data-for="">
+                                        <div class="form-group">
+                                            <input type="hidden" class="form-control px-3" name="nombre" data-form-field="" value="${nombre}" id="name-header15-i">
+                                        </div>
+                                    </div>
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="text"  title="Nombre" class="form-control px-3" name="nombreNuevoA" data-form-field=""  value="${nombre}" id="name-header15-i" disabled>
+                                    </div>
+                                </div>
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="date" title="Fecha Inicio"  class="form-control px-3" name="fechaNueva" data-form-field="" value="${fechaInicio}" id="email-header15-i">
+                                    </div>
+                                </div>
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="date" title="Fecha Fin"  class="form-control px-3" name="fechaFinNueva" data-form-field="" value="${fechaFin}" id="phone-header15-i">
+                                    </div>
+                                </div>
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                     <div id="map"></div>
+                                      <input type="hidden" id="coorden" value="${ubicacion}" name="ubicacionVieja"/>
+                         			<input type="text" readonly value="${ubicacion}" id="ubicacion" class="form-control px-3" name="ubicacionNueva" data-form-field="" placeholder="Ubicación" id="phone-header15-i">
+                                     
+                                         <!-- <input type="text" title="Ubicación" class="form-control px-3" name="ubicacionNueva" data-form-field="" value="${ubicacion}" id="phone-header15-i"> -->
+                                    </div>
+                                </div>
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="number" title="Número de participantes" class="form-control px-3" name="numparNuevo" data-form-field="" value="${numParticipantes}" id="phone-header15-i">
+                                    </div>
+                                </div>
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="text" title="Precio" class="form-control px-3" name="precioNuevo" data-form-field="" value="${precio}">
+                                    </div>
+                                </div>
+                             
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="number" title="Puntos" class="form-control px-3" name="puntosNuevo" data-form-field=""value="${puntos}">
+                                    </div>
+                                </div>
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                        
+                                                <input type="file" title="Imagen" name="imagen"  id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected"  style="display:none" multiple />
+                                                <label for="file-1"style="width:100%;height:50px;"> <i class="fas fa-image"></i>   Elegir Imagen</label>                                                
+                                            </div>
+                                        </div>
+
+                        
+
+
+
+                            </div>
+                    </div>
+                </div>
+                <div style="margin-top:10px;">
+                    <button type="submit" value="Insertar">Modif.</button>
+                    <button type="reset" value="Limpiar">Borrar</button>
+                    <a href="/Demo_Web/index.html"><button type="button" value="Volver">Volver</button></a>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuELBhU6RUMASvt7LMELsAAt46gJmQNRc&callback=initMap" async defer></script>
+   
 
 
 </body>

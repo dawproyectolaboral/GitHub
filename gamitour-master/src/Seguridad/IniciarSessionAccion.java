@@ -52,7 +52,7 @@ public class IniciarSessionAccion extends Accion{
 			return "indexpanel.html";
 			
 		}
-		System.out.println("se encuentra el usuario :"+ c);
+		//System.out.println("se encuentra el usuario :"+ c);
 		//SI LA PASSWORD ES DISTINTA
 		if(c.getPassword().equals(password)){
 		//	System.out.println("coincide la contraseña");

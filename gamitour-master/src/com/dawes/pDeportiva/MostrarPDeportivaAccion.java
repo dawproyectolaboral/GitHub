@@ -36,12 +36,12 @@ public class MostrarPDeportivaAccion extends Accion{
 		request.setAttribute("nombre", nomPDeportiva);
 		
 		Date fechaInicioDate = pDeportiva.getFechainicio();
-		DateFormat formatoFechaInicio = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat formatoFechaInicio = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaInicioString = formatoFechaInicio.format(fechaInicioDate);
 		request.setAttribute("fechainicio", fechaInicioString);
 		
 		Date fechaFinDate = pDeportiva.getFechafin();
-		DateFormat formatoFechaFin = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat formatoFechaFin = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaFinString = formatoFechaFin.format(fechaFinDate);
 		request.setAttribute("fechafin", fechaFinString);
 		

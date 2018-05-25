@@ -1,0 +1,27 @@
+
+
+	Pendientes para acabar en el menu de administracion:
+
+	
+	IMPORTANTE SOLUCIONAR :
+	-> Subida de archivos.
+	-> El id de paradas en la bd no consegí que fuera auntoincrementado. Hay un "parche", se suma la del total + 1.
+	-> El filtro es un parche como una casa, pero da muy bien el pego. Redirecciona y no permite entrar sin estar autentificado
+	pero si sabes las direcciones del entorno cerrado entra. No creo que lo modifique mas.
+	
+	
+	
+	MENOR IMPORTANCIA :
+	-> Añadir UTF-8 para que la aplicacion al insertar no de errores.
+	-> Fecha de nacimiento al crear un usuario (indexpanel)
+	-> Modificar CSS de paradas
+	-> Modificar CSS de PruebasDeportivas + fechas. (las fechas solo es cambiar el new format(...)).
+	-> Modificar CSS de usuarios + fechas
+	
+	
+	
+	DUDAS:
+	-> ¿Porqué insertar un multimedia tiene puntos?, ¿no se asignan en premios?. No tiene sentido que al insertar
+	un multimedia te asignes puntos. Multimedia lo tenemos en el panel de administrador y creo que es un apartado de
+	cliente. Donde ingresa el archivo que quiera con su titulo y la opcion de poner puntos se haría desde modificar, 
+	en ese caso, no tiene sentido tener un insertar desde administracion.

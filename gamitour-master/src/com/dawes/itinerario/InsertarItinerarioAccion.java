@@ -25,7 +25,9 @@ public class InsertarItinerarioAccion extends Accion{
 		String nombre = request.getParameter("nombreItinerario");
 		String categoria = request.getParameter("categoria");
 		String duracion = request.getParameter("duracion");
-		String ubicacion = request.getParameter("ubicacion");
+		String ubica = request.getParameter("ubicacion");
+		String ubicacion = ubica.substring(1,ubica.length()-1);
+
 		Set<Parada> listado = new HashSet<Parada>(0);
 		
 		Itinerario itinerario = new Itinerario(nombre,categoria,duracion,ubicacion,listado);

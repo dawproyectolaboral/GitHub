@@ -18,7 +18,18 @@ public class ModificarItinerariosAccion extends Accion {
 		itinerario.setNombre(request.getParameter("nombreNuevo"));
 		itinerario.setCategoria(request.getParameter("categoriaNueva"));
 		itinerario.setDuracion(request.getParameter("duracionNueva"));
-		itinerario.setUbicacion(request.getParameter("ubicacionNueva"));
+		String ubica = request.getParameter("ubicacionNueva");
+		String ubicaVieja = request.getParameter("ubicacionVieja");
+
+		if(ubica.charAt(0)=='('){
+			
+			ubica = ubica.substring(1,ubica.length()-1);
+			itinerario.setUbicacion(ubica);
+		}else{
+			itinerario.setUbicacion(ubicaVieja);
+		}
+		
+		
 		
 		service.update(itinerario);
 		

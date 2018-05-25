@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
         <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <html>
@@ -14,8 +14,12 @@ pageEncoding="ISO-8859-1"%>
         </head>
 
         <body>
+        
+        <div style="height: 60px;">
+        <h1 style="text-align:center;color:White;font-family:forte;font-size:40px;margin-top:20px;">GamiAstour</h1>  
+    </div>
             <div id="cabecera">
-                <h1>Las paradas del itinerario "${nombre}" son: </h1>
+                <h1>Itinerario "${nombre}" </h1>
             </div>
             <div style="overflow-x: auto;width:95%;margin: auto;">
                 <table style="margin:  auto;" id="tabla" class="tablesorter">
@@ -48,8 +52,7 @@ pageEncoding="ISO-8859-1"%>
                             <a id="icono" href="BorrarParada.do?numParadaBorrar=${unaParada.numeroParada}"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                                 <td>
-                                    <a id="icono" href="contenido/paradas/ModificarParadas.jsp?idParada=${unaParada.idparada}&nombre=${unaParada.nombre}&numeroParada=${unaParada.numeroParada}&ubicacion=${unaParada.ubicacion}&historia=${unaParada.historia}&anecdotario=${unaParada.anecdotario}&gastronomia=${unaParada.gastronomia}&imagen=${unaParada.imagen}&itinerario=${unaParada.itinerario}"><i class="far fa-edit"></i></a>
-                                </td>
+                                    <a id="icono" href="ModificarParadasPaso.do?numeroParada=${unaParada.numeroParada}"><i class="far fa-edit"></i></a>  </td>
                                  <td>
                             <a id="icono" title="Ver P.Deportivas" href="MostrarPDeportivasParada.do?idparada=${unaParada.idparada}&nombre=${unaParada.nombre}"><i class="fas fa-futbol"></i></a>
                                 </td>
@@ -70,13 +73,13 @@ pageEncoding="ISO-8859-1"%>
                 <i class="fas fa-sort-amount-up"></i></a>
                 </div>
                 <div class="cajamenu">
-                    <a href="/Demo_Web/index.html">Volver al Menu
+                    <a href="/Demo_Web/index.html">Volver al MenÃº
                 <br>
                  <i class="fas fa-undo"></i></a></div>
                 
                 <!--  
                  <div class="cajamenu">
-                    <a href="" onclick="history.back()">Volver atrás
+                    <a href="" onclick="history.back()">Volver atrï¿½s
                 <br>
                  <i class="fas fa-arrow-left"></i></a></div>
                 -->

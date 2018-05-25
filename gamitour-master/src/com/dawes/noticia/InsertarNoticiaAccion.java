@@ -38,8 +38,8 @@ public class InsertarNoticiaAccion extends Accion {
 			e.printStackTrace();
 		}
 		
-		
 		Date fechadecaducidad = null;
+		
 		String fechacaducidad = request.getParameter("fechacaducidad");
 		SimpleDateFormat formatoDelTexto2 = new SimpleDateFormat("yyyy-MM-dd");
 		try {

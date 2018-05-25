@@ -1,14 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="d" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Modificar Itinerarios</title>
+
+<link rel="shortcut icon" href="logoastur.png">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="css/select.css">
+<link rel="stylesheet" href="assets/theme/css/style.css">
+<link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+<script language="JavaScript" SRC="js/mapaModificar.js"></script>
+
 <style type="text/css">
 
-    body{
-        background-color: #EFF4F5;
+   body{
+    background-image: url("images/img6.png");
+    background-repeat: no-repeat;
+    background-size:100%;
+    
     }
     .titulo{
     text-align:center;
@@ -30,94 +45,94 @@
     color:white;
 }
 
-table {
+ button {
+            width: 90px;
+            border: none;
+            background:#1F2D3D;
+            color: #f2f2f2;
+            font-size: 18px;
+            border-radius: 5px;
+            position: relative;
+            box-sizing: border-box;
+            transition: all 500ms ease;
+            padding: 8px;
 
-font: 75%/1.5em arial, geneva, sans-serif;
-border-collapse: collapse;
-margin: auto;
-margin-top:50px;
-font-size:17px;
-color:#EFF4F5;
+        }
 
-}
+        button:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0px;
+            height: 43px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 5px;
+            transition: all 0.5s ease;
+        }
 
-td {
-  
-border-bottom: 8px solid #fff;
-border-left: 1px dotted #fff;
-vertical-align: top;
-padding: 12px;
-border-style:groove;
+        button:hover:before {
+            width: 100%;
+        }
+	 #map {
+        width: 300px;
+        height: 200px;
+      }
 
-}
-
-tr {
-    background-color: #64A7D1;
-    
-}
-
-input{
-    background-color: #EFF4F5;
-    
-   
-   
-}
-
-.contenido{
-    margin:auto;
-}
-.botones{
-margin-top:10px;
-
-display:table;
-width: 100%;
-        height: 50px;
-      
-        text-align: center;
-  
-}
-.boton{
-    display:table-cell;
-    vertical-align: middle;
-    
-}
-
-.button{
-
-    border-radius: 9px;
-    width:140px;
-    padding: 5px;
-    background-color: #1F2D3D;
-    color:#EFF4F5;
-}
 
     </style>
 </head>
 <body>
-	<p class="titulo">GAMITOUR</p>
-        
-  
-<div class="cabecera">
-        <a class="titcabecera">MODIFICAR ITINERARIOS</a>
-   </div>
+     
+    
+	
+ <div style="height: 60px;">
+    <h1 style="text-align:center;color:White;font-family:forte;font-size:40px;margin-top:20px;">GamiAstour</h1>  
+</div>
+    <div class="cabecera">
+            <a class="titcabecera" style="color:White;">MODIFICAR ITINERARIOS</a>
+       </div>
+    
 
-<div class="contenido">
-	<form action="ModificarItinerarios.do" method="post">
-	<table>
-		<tr>
-			<td>Nombre: </td>
-			<td>
-			<input type="hidden" name="nombreViejo" value="${nombre}"/>
-			<input type="text" name="nombreNuevo" value="${nombre}"/></td>
-		</tr>
-		<tr>
-			<td>Categoría: </td>
-			<td><input type="text" name="categoriaNueva" value="${categoria}"/></td>
-		</tr>
-		<tr><td>Duracion: (actual : "${duracion}")</td>
-<td>
-<select name="duracionNueva" >
+<section class="cid-qQSwyVJLVG mbr-fullscreen mbr-parallax-background" id="header15-i">
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color:#5B5B5B;"></div>
+
+    <div class="container align-right" style="text-align: center;">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-5" style="margin:auto">
+                <div class="form-container" style="overflow-y: auto;margin-top:-120px;">
+                    <div class="media-container-column" data-form-type="formoid">
+                        <form action="ModificarItinerarios.do" class="mbr-form" method="POST">
+                       
+                            <div style="max-height: 340px;">
+
+
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="hidden" class="form-control px-3" name="nombreViejo" data-form-field="" value="${nombre}" id="name-header15-i">
+                                    </div>
+                                </div>
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control px-3" title="Nombre Nuevo"  name="nombreNuevo" data-form-field="" value="${nombre}" id="name-header15-i" >
+                                    </div>
+                                </div>
+                                <div data-for="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control px-3" title="Categoría"  name="categoriaNueva" data-form-field="" value="${categoria}" id="email-header15-i">
+                                    </div>
+                                </div>
+                                           <div data-for="">
+                                    <div class="form-group">
+                                         <div class="center-on-page">
+												
+                                                        <div class="select" title="Duración">
+                                                        
+     <select name="duracionNueva" >
 	<c:forEach>
+		 <option value="${duracion}">Duración Actual : ${duracion} </option>
 		 <option value="0.5hora">0.5</option>
 		 <option value="1horas">1.0</option>
 		 <option value="1.5horas">1.5</option>
@@ -127,29 +142,48 @@ width: 100%;
 		 <option value="+3horas">+3.0</option>
 	</c:forEach>
 </select>
-	horas </td>
-</tr>
-			<tr>
-			<td>Ubicación: </td>
-			<td><input type="text" name="ubicacionNueva" value="${ubicacion}"/></td>
-		</tr>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
 
-</table>	
-<div class="botones">
-     
-    <div class="boton">
-<input class="button" type="submit" value="Modificar">
-<input class="button" type="reset" value="Limpiar">
-<a href="/Demo_Web/index.html"><input class="button" type="button" value="Volver"></a>
-
-</div>
-
-</div>
+                                <div data-for="">
+                                    <div class="form-group">
+               					 <div id="map"></div>
+               					 <input type="hidden" id="coorden" value="${ubicacion}" name="ubicacionVieja" " />
+                         			<input type="text" readonly value="${ubicacion}" id="ubicacion" class="form-control px-3" name="ubicacionNueva" data-form-field="" placeholder="Ubicación" id="phone-header15-i">
+                                      </div>
+                                </div>
 
 
-</form>
-</div>
+                                
+                        
 
+
+
+                            </div>
+                    </div>
+                </div>
+                <div style="margin-top:10px;">
+                    <button type="submit" value="Insertar">Modif.</button>
+                    <button type="reset" value="Limpiar">Borrar</button>
+                    <a href="/Demo_Web/index.html"><button type="button" value="Volver">Volver</button></a>
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuELBhU6RUMASvt7LMELsAAt46gJmQNRc&callback=initMap" async defer></script>
+   
 
 
 

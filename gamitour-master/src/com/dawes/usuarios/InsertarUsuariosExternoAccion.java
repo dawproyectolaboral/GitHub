@@ -24,18 +24,18 @@ public class InsertarUsuariosExternoAccion extends Accion{
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
-		
+			System.out.println("form insertar usuario externo?");
 				ServiceGenericDAO su = new ServiceGenericDAOImp();
 				 
 				Rol rol = (Rol)su.getDetalleRol("usuario");
 				
 				String nombre = request.getParameter("nombre");
 				String apellido = request.getParameter("apellidos");
-				/*String a Date*/
+				
 				Date fecha = null;
 				try {
 					String fechaNacimiento = request.getParameter("fechaNacimiento");
-					SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+					SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 					String strFecha = fechaNacimiento;
 					fecha = formatoDelTexto.parse(strFecha);
 				} catch (ParseException e) {

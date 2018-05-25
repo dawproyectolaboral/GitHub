@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
         <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <html>
@@ -14,10 +14,14 @@ pageEncoding="ISO-8859-1"%>
         </head>
 
         <body>
+        
+        <div style="height: 60px;">
+        <h1 style="text-align:center;color:White;font-family:forte;font-size:40px;margin-top:20px;">GamiAstour</h1>  
+    </div>
             <div id="cabecera">
-                <h1>Se muestran todas las paradas:</h1>
+                <h1>Paradas</h1>
             </div>
-            <div style="overflow-x: auto;width:95%;margin: auto;">
+            <div style="overflow-x: auto;width:95%;margin: auto;max-height: 230px;">
                 <table style="margin:  auto;" id="tabla" class="tablesorter">
                     <thead>
                         <tr>
@@ -50,7 +54,12 @@ pageEncoding="ISO-8859-1"%>
                         <td>
                         <a id="icono" href="ModificarParadasPaso.do?numeroParada=${unaParada.numeroParada}"><i class="far fa-edit"></i></a>
                         </td>
-                        
+                       <td>
+                            <a id="icono" title="Ver P.Deportivas" href="MostrarPDeportivasParada.do?idparada=${unaParada.idparada}&nombre=${unaParada.nombre}"><i class="fas fa-futbol"></i></a>
+                       </td>
+                        <td>
+                            <a id="icono" title="Ver P.Culturales" href="MostrarPCulturalesParada.do?idparada=${unaParada.idparada}&nombre=${unaParada.nombre}"><i class="fas fa-book"></i></a>
+                        </td>
                         </tr>
                         </c:forEach>
                         </tbody>
@@ -63,7 +72,7 @@ pageEncoding="ISO-8859-1"%>
                 <i class="fas fa-sort-amount-up"></i></a>
                 </div>
                 <div class="cajamenu">
-                    <a href="/Demo_Web/index.html">Volver al Menu
+                    <a href="/Demo_Web/index.html">Volver al Menú
                 <br>
                  <i class="fas fa-undo"></i></a></div>
             </div>

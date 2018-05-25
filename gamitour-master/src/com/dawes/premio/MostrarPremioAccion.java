@@ -39,12 +39,12 @@ public class MostrarPremioAccion extends Accion{
 		request.setAttribute("imagen", imagen);
 
 		Date fechaa = premio.getFechaactivacion();
-		DateFormat fecha1 = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat fecha1 = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaactivacion = fecha1.format(fechaa);
 		request.setAttribute("fechadeactivacion", fechaactivacion);
 		
 		Date fechadeconsumo = premio.getFechaconsumo();
-		DateFormat fecha2 = new SimpleDateFormat("yyyy/MM/dd");
+		DateFormat fecha2 = new SimpleDateFormat("MM/dd/yyyy");
 		String fechaF2String = fecha2.format(fechadeconsumo);
 		request.setAttribute("fechaconsumo", fechaF2String);
 		

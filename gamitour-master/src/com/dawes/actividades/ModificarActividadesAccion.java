@@ -24,7 +24,7 @@ public class ModificarActividadesAccion extends Accion{
 		try {
 			String fechaInicio = request.getParameter("fechaNueva");
 			
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			
 			String strFecha = fechaInicio;
 			
@@ -41,7 +41,7 @@ public class ModificarActividadesAccion extends Accion{
 		try {
 			String fechaFinal = request.getParameter("fechaFinNueva");
 			
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			
 			String strFecha = fechaFinal;
 			
@@ -53,8 +53,14 @@ public class ModificarActividadesAccion extends Accion{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		actividad.setUbicacion(request.getParameter("ubicacionNueva"));
+		String ubicaVieja = request.getParameter("ubicacionVieja");
+		String ubica = request.getParameter("ubicacionNueva");
+		if(ubica.charAt(0)=='('){
+			ubica = ubica.substring(1,ubica.length()-1);
+			actividad.setUbicacion(ubica);
+		}else{
+			actividad.setUbicacion(ubicaVieja);
+		}
 		
 		String nCambio = request.getParameter("numparNuevo");
 		

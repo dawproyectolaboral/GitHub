@@ -1,9 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="JavaScript" SRC="js/mapaModificar.js"></script>
 <title>Modificar Paradas</title>
 <style type="text/css">
 
@@ -91,6 +93,12 @@ width: 100%;
     color:#EFF4F5;
 }
 
+#map {
+    width: 300px;
+    height: 200px;
+}
+
+
     </style>
 </head>
 <body>
@@ -110,8 +118,13 @@ width: 100%;
 			<td><input type="text" name="nombreNuevo" value="${nombre}"/></td>
 		</tr>
 		<tr>
-			<td>Ubicación: </td>
-			<td><input type="text" name="ubicacionNueva" value="${ubicacion}"/></td>
+			<td>Ubicación: </td><td>
+			 <div id="map"></div>
+			  <input type="hidden" id="coorden" value="${ubicacion}" name="ubicacionVieja"/>
+    		<input type="text" readonly value="${ubicacion}" id="ubicacion" class="form-control px-3" name="ubicacionNueva" data-form-field="" placeholder="Ubicación" id="phone-header15-i">
+                                     
+			<!-- <td><input type="text" name="ubicacionNueva" value="${ubicacion}"/> -->
+			</td> 
 		</tr>
 		<tr>
 			<td>Historía: </td>
@@ -148,6 +161,9 @@ width: 100%;
 
 
 
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuELBhU6RUMASvt7LMELsAAt46gJmQNRc&callback=initMap" async defer></script>
+   
 
 
 </body>

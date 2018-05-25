@@ -36,7 +36,7 @@ public class ModificarUsuariosAccion extends Accion{
 		Date fecha = null;
 		try {
 			String fechaNacimiento = request.getParameter("fechaNacimientoNuevo");
-			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("MM/dd/yyyy");
 			String strFecha = fechaNacimiento;
 			fecha = formatoDelTexto.parse(strFecha);
 		} catch (ParseException e) {

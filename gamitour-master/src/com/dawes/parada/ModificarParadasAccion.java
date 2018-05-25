@@ -21,7 +21,17 @@ public class ModificarParadasAccion extends Accion {
 		Parada parada = (Parada)service.getDetalleParada(numeroParada);
 		
 		parada.setNombre(request.getParameter("nombreNuevo"));
-		parada.setUbicacion(request.getParameter("ubicacionNueva"));
+		String ubicaVieja = request.getParameter("ubicacionVieja");
+		String ubica = request.getParameter("ubicacionNueva");
+		
+		if(ubica.charAt(0)=='('){
+			ubica = ubica.substring(1,ubica.length()-1);
+			parada.setUbicacion(ubica);
+		}else{
+			parada.setUbicacion(ubicaVieja);
+		}
+		
+		
 		parada.setHistoria(request.getParameter("historiaNueva"));
 		parada.setAnecdotario(request.getParameter("anecdotarioNuevo"));
 		parada.setGastronomia(request.getParameter("gastronomiaNueva"));

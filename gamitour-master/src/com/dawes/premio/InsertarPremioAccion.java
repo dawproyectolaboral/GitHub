@@ -21,8 +21,6 @@ public class InsertarPremioAccion extends Accion{
 	
 	@Override
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		/*nombre,descripcion,imagen,fechaactivacion,fechaconsumo,puntos,idcliente*/
 		
 		String nombrecliente = request.getParameter("ganador");
 		Cliente cliente = (Cliente)su.getDetalleCliente(nombrecliente);
@@ -59,9 +57,15 @@ public class InsertarPremioAccion extends Accion{
 		Premio premio = new Premio(cliente, nombre, descripcion, imagen, Fechaactivacion,fechaconsumo, puntosInt);
 		
 		Set<Premio> premiosclie = cliente.getPremios();
-		cliente.setPuntosacumulados(premio.getPuntos());
+		int puntosAcumulados = cliente.getPuntosacumulados();
+		int puntosTotales = puntosAcumulados + puntosInt;
+		cliente.setPuntosacumulados(puntosTotales);
 		premiosclie.add(premio);
 		cliente.setPremios(premiosclie);
+		
+		
+		
+		
 		su.update(cliente);
 		
 		su.insertar(premio);

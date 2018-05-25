@@ -21,8 +21,8 @@ public class InsertarParadaAccion extends Accion {
 	public String ejecutar(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		ServiceGenericDAO su = new ServiceGenericDAOImp();
-	
-	
+
+
 		Itinerario itinerario =(Itinerario)su.getDetalleItinerario(request.getParameter("nomItinerario"));
 		
 		String nombre = request.getParameter("nomParada");
@@ -33,12 +33,8 @@ public class InsertarParadaAccion extends Accion {
 		int ultimaParada = paradas.size();
 		numeroParadaInt = ultimaParada+1;
 		
-		
-		//String numeroParada = request.getParameter("numParada");
-		//Integer numeroParadaInt = Integer.parseInt(numeroParada);
-		
-		
-		String ubicacion = request.getParameter("ubicParada");
+		String ubica = request.getParameter("ubicacion");
+		String ubicacion = ubica.substring(1,ubica.length()-1);
 		String historia = request.getParameter("histParada");
 		String anecdotario = request.getParameter("anecParada");
 		String gastronomia = request.getParameter("gastroParada");
@@ -51,6 +47,7 @@ public class InsertarParadaAccion extends Accion {
 
 		Set<Parada> itineparadas = itinerario.getParadas();
 		itineparadas.add(parada);
+		
 		itinerario.setParadas(itineparadas);
 		su.update(itinerario);
 		

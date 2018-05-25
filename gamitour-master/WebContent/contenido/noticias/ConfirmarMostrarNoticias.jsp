@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
      <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,11 +16,15 @@
 </head>
 <body>
 
+<div style="height: 60px;">
+        <h1 style="text-align:center;color:White;font-family:forte;font-size:40px;margin-top:20px;">GamiAstour</h1>  
+    </div>
+
 <div  id="cabecera">
 <h1>Noticias  </h1>
 </div>
 
-<div style="overflow-x: auto;width:95%;margin: auto;">
+<div style="overflow-x: auto;width:95%;margin: auto;max-height: 230px;">
 <table style="margin:  auto;" id="tabla" class="tablesorter">
  <thead>
 <tr>
@@ -44,7 +48,7 @@
 	<td>${unaNoticia.imagen}</td>
 
 	<td><a id="icono" href="BorrarNoticia.do?idBorrar=${unaNoticia.nombre}"><i class="fas fa-trash-alt"></i></a></td>
-	<td><a id="icono" href="???.do?idBorrar=${unaNoticia.nombre}"><i class="far fa-edit"></i></a></td>
+	
 	
 	</tr>
 </c:forEach>
@@ -62,7 +66,7 @@
 
                  </div>
                  <div class="cajamenu">
-                     <a href="/Demo_Web/index.html">Volver al Menú
+                     <a href="/Demo_Web/index.html">Volver al MenÃº
                         <br>
                         <i class="fas fa-undo"></i></a></div>
                

@@ -16,7 +16,6 @@ public class ConvertirUsuarioAdmin {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-
 		/*CLIENTES SELECCIONABLES*/
 		verClientes();
 		/*SELECCIONA CLIENTE QUE PASE A TENER ROL ADMIN*/

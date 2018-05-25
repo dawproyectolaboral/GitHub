@@ -1,7 +1,6 @@
 package com.dawes.parada;
 
-import java.util.HashSet;
-import java.util.Set;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +23,7 @@ public class InsertarParadaAccionSelect extends Accion {
 		request.setAttribute("itinerarios", su.getMostrarItinerarios());
 	
 		
-		return "/contenido/multimedias/FormInsertarParada.jsp";
+		return "/contenido/paradas/FormInsertarParadaSelect.jsp";
 	}
 
 }

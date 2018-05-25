@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script language="JavaScript" SRC="../../js/mapa.js"></script>
+<link rel="stylesheet" type="text/css" href="css.css">
 <title>InsertarParada</title>
+
 <style type="text/css">
 
     body{
@@ -68,7 +71,6 @@ input{
 }
 .botones{
 margin-top:10px;
-
 display:table;
 width: 100%;
         height: 50px;
@@ -91,6 +93,12 @@ width: 100%;
     color:#EFF4F5;
 }
 
+#map {
+    width: 300px;
+    height: 200px;
+}
+
+
     </style>
 </head>
 <body>
@@ -102,26 +110,38 @@ width: 100%;
   
 <div class="cabecera">
         <a class="titcabecera">INSERTAR PARADA</a>
-   </div>
+  </div>
 
 <div class="contenido">
 <form action="../../InsertarParada.do" method="POST">
 
 <table>
+
+<tr><td>Nombre del itinerario asociado: </td><td>
+
+<p><%= request.getParameter("nombre") %></p>
 <input type="hidden" name="nomItinerario" value="<%=request.getParameter("nombre")%>">
-<tr><td>Nombre del itinerario asociado: </td><td><input type="text" value="<%=request.getParameter("nombre")%>"></td></tr>
+
+
+</td></tr>
 <tr><td>Nombre: </td><td><input type="text" name="nomParada"></td></tr>
-<tr><td>Número: </td><td><input type="text" name="numParada"></td></tr>
-<tr><td>Ubicacion: </td><td><input type="text" name="ubicParada"></td></tr>
-<tr><td>Historia: </td><td><textarea rows="6" cols="40" name="histParada" maxlength="200"></textarea></td></tr>
-<tr><td>Anecdotario: </td><td><textarea rows="6" cols="40" name="anecParada" maxlength="200"></textarea></td></tr>
-<tr><td>Gastronomía: </td><td><textarea rows="6" cols="40" name="gastroParada" maxlength="200"></textarea></td></tr>
+<!-- 
+<tr><td>Nï¿½mero: </td><td><input type="text" name="numParada"></td></tr>
+-->
+<tr><td>Ubicacion: </td><td>
+<div id="map"></div>
+<input type="text" readonly id="ubicacion" class="form-control px-3" name="ubicacion" data-form-field="" placeholder="UbicaciÃ³n" id="phone-header15-i">
+
+</td></tr>
+<tr><td>Historia: </td><td><textarea rows="6" cols="40" name="histParada" ></textarea></td></tr>
+<tr><td>Anecdotario: </td><td><textarea rows="6" cols="40" name="anecParada" ></textarea></td></tr>
+<tr><td>Gastronomï¿½a: </td><td><textarea rows="6" cols="40" name="gastroParada" ></textarea></td></tr>
 <tr><td>Imagen: </td><td><input type="text" name="imgParada"></td></tr>
 
 </table>	
 <div class="botones">
      
-    <div class="boton">
+<div class="boton">
 <input class="button" type="submit" value="Insertar">
 <input class="button" type="reset" value="Limpiar">
 <a href="/Demo_Web/index.html"><input class="button" type="button" value="Volver"></a>
@@ -135,8 +155,7 @@ width: 100%;
 </div>
 
 
-
-
-
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuELBhU6RUMASvt7LMELsAAt46gJmQNRc&callback=initMap" async defer></script>
+   
 </body>
 </html>

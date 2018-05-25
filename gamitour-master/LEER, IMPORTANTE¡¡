@@ -1,0 +1,55 @@
+
+						/*********		IMPORTANTE ANTES DE COMENZAR *********/
+						
+						
+						
+										/+++	ROLES	 +++/
+										
+															
+Para que la aplicación funcione correctamente hay que crear 2 roles OBLIGATORIAMENTE antes de arrancar el servidor desde el script.
+
+Para crear los roles con la base de datos de 0 existe una miniaplicacion en "com.dawes.util" para generar un nuevo rol.
+Ejecutar desde aplicacion : "GenerarRol".
+Lo genera junto con su id. Así que mejor usar la aplicación antes de meterlo a mano en la BD.
+
+		Roles necesaros (EXACTAMENTE IGUALES, O NO FUNCIONA EL REDIRECCIONAMIENTO):
+		 
+			->	"usuario" 	-> Que será el rol por defecto de todos los usuarios creados.
+			->	"admin" 	-> Que será el rol administrador. Asignado a mano a través de un scritp.
+			
+		(Queda pendiente pensar en realizar mas roles).
+
+
+
+								/+++	USUARIO ADMINISTRADOR	 +++/
+
+
+Para crear un usuario ADMINISTRADOR :
+ 
+	1º.- Crear el usuario como cualquier otro, desde la ventana de "indexpanel.html", "registrarse".
+	("indexpanel.html" es la ventana PRINCIPAL de la aplicación, desde la que arrancará cualquier usuario).
+	
+	2º.- Desde "com.dawes.util" ejecutar en modo aplicaciÓn : "ConvertirUsuarioAdmin". (*Tener el rol creado primero*).
+
+
+Existe otro metodo para cambiar el rol del usuario a uno distinto. No creo que lo vallamos a usar si usamos bien el primero.
+
+
+									/+++	BORRAR CONTENIDO	 +++/
+
+
+
+Si se quiere borrar todos los datos de la aplicación, hay un script en "com.dawes.util", llamado "BorrarTodosLosDatos".
+
+Si quereis borrar todos los datos, pero mantener los roles, comentar lo que querais mantener. Por defecto, los roles y
+los usuarios no se borrán.
+
+
+
+									/+++	BASE DE DATOS	 +++/
+
+La base de datos "bd24-05-2018" tiene los ultimos cambios pedidos por Charo en los que los campos grandes son de tipo "text()".
+No contiene datos, solo tablas y creación. Además de que se ha cambiado en Pruebasdeportivas que al eliminar borre en cascada,
+si no cometia errores por la aplicación.
+
+

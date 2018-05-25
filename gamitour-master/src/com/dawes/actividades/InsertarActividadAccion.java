@@ -26,10 +26,15 @@ public class InsertarActividadAccion extends Accion{
 		String nombre = request.getParameter("nombreActividad"); 
 		//fecha inicio
 		Date fechaInicio = null;
+		
+		
+		
 		try {
-			String fecha1 = request.getParameter("fechaInicio");
 			SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
+			String fecha1 = request.getParameter("fechaInicio");
+			System.out.println("El valor del calendario es :"+ fecha1);
 			fechaInicio = formatoDelTexto.parse(fecha1);
+			System.out.println(fechaInicio);
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,14 +42,16 @@ public class InsertarActividadAccion extends Accion{
 		//fecha fin
 			Date fechaFin = null;
 			try {
+				SimpleDateFormat formatoDelTexto2 = new SimpleDateFormat("yyyy-MM-dd");
 				String fecha2 = request.getParameter("fechaFinal");
-				SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
-				fechaFin = formatoDelTexto.parse(fecha2);
+				fechaFin = formatoDelTexto2.parse(fecha2);
+				System.out.println(fechaFin);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		String ubicacion =request.getParameter("ubicacion"); 
+			String ubica = request.getParameter("ubicacion");
+			String ubicacion = ubica.substring(1,ubica.length()-1);
 		
 		String numeroParticipantes = request.getParameter("participantes");
 		Integer numeroParticipantesInt = Integer.parseInt(numeroParticipantes);
